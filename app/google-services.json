@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "697238839559",
+    "firebase_url": "https://biometricattendance-879fe.firebaseio.com",
+    "project_id": "biometricattendance-879fe",
+    "storage_bucket": "biometricattendance-879fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697238839559:android:e690504bdd9f9eeb2125a2",
+        "android_client_info": {
+          "package_name": "com.grace.biometricattendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "697238839559-s3elbd4saf3e0chfv9aaoqu85d4uj8jm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6uhhmX6WLvMMH3xOcdrp6rYYNF9DmuHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "697238839559-s3elbd4saf3e0chfv9aaoqu85d4uj8jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

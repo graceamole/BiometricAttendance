@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".StudentDetails">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        >
+
+        <EditText
+            android:id="@+id/matriculation_number"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/input_outline"
+            android:hint="Matriculation Number"
+            android:padding="8dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password Label -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+
+        >
+
+        <EditText
+            android:id="@+id/first_name"
+            android:background="@drawable/input_outline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="First Name"
+            android:inputType="textPassword"
+            android:padding="8dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Password Label -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+
+        >
+
+        <EditText
+            android:id="@+id/last_name"
+            android:background="@drawable/input_outline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Last Name"
+            android:padding="8dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        >
+
+        <EditText
+            android:id="@+id/level"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/input_outline"
+            android:hint="Level"
+            android:padding="8dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password Label -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+
+        >
+
+        <EditText
+            android:id="@+id/gender"
+            android:background="@drawable/input_outline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Gender"
+            android:padding="8dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/scan_fingerprint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="129dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_style"
+        android:padding="12dp"
+        android:text="Scan FingerPrint"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
