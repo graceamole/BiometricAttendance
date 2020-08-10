@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddClass">
+
+
+    <!-- Password Label -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+
+        >
+
+        <EditText
+            android:id="@+id/course_title"
+            android:background="@drawable/input_outline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Course Title"
+            android:padding="8dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Password Label -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+
+        >
+
+        <EditText
+            android:id="@+id/course_code"
+            android:background="@drawable/input_outline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Course Code"
+            android:inputType="textPassword"
+            android:padding="8dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/add_class"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="129dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_style"
+        android:padding="12dp"
+
+        android:text="Add Class"
+        android:textColor="@android:color/white" />
+    <Button
+        android:id="@+id/attendance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_style"
+        android:padding="12dp"
+
+        android:text="Attendance"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

@@ -14,7 +14,10 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.Timestamp;
+import com.google.firebase.firestore.Blob;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.type.DateTime;
 import com.grace.biometricattendance.sourceafis.FingerprintTemplate;
 
 import java.util.HashMap;
@@ -64,16 +67,14 @@ public class StudentDetails extends AppCompatActivity {
                 || gender.getText().toString().isEmpty()) {
             return;
         }
-        Intent intent = new Intent(StudentDetails.this, FingerPrintPage.class);
-        startActivityForResult(intent, REQUEST_CODE);
-
 
         Map<String, Object> student = new HashMap<>();
+        student.put("studentId", Timestamp.now());
         student.put("first_name", firstName.getText().toString());
         student.put("last_name", lastName.getText().toString());
         student.put("level", level.getText().toString());
         student.put("gender", gender.getText().toString());
-        student.put("fingerprint", img.toString());
+        student.put("fingerprint", "");
 
         firestore.collection("Student").document(matriculationNumber.getText().toString())
                 .set(student).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -87,6 +88,11 @@ public class StudentDetails extends AppCompatActivity {
                 Toast.makeText(StudentDetails.this, "Student creation failed", Toast.LENGTH_SHORT).show();
             }
         });
+
+        Intent intent = new Intent(StudentDetails.this, FingerPrintPage.class);
+        startActivityForResult(intent, REQUEST_CODE);
+
+
     }
 
     @Override
@@ -103,7 +109,8 @@ public class StudentDetails extends AppCompatActivity {
 
                         if (status == Status.SUCCESS) {
                             img = data.getByteArrayExtra("img");
-
+                            firestore.collection("Student")
+                                    .document(matriculationNumber.getText().toString()).update("fingerprint", Blob.fromBytes(img));
 
                         }
                     }

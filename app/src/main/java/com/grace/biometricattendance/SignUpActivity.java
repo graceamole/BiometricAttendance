@@ -22,6 +22,7 @@ public class SignUpActivity extends AppCompatActivity {
     private static String TAG = "TAG";
     private Button signUp;
     private EditText email, username, password;
+    TextView signInText;
     private FirebaseAuth mAuth;
 
     @Override
@@ -32,6 +33,14 @@ public class SignUpActivity extends AppCompatActivity {
         email = (EditText)findViewById(R.id.email);
         username = (EditText)findViewById(R.id.input_username);
         password = (EditText)findViewById(R.id.input_password);
+        signInText = (TextView)findViewById(R.id.signin_text);
+        signInText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+                startActivity(intent);
+            }
+        });
         signUp = (Button) findViewById(R.id.signup);
 
         mAuth = FirebaseAuth.getInstance();
