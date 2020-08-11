@@ -99,13 +99,24 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:text="Already have an account? Sign In"
+            android:id="@+id/signin_text"
+            >
+
+        </TextView>
+
+
 
 
         <Button
             android:id="@+id/signup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="129dp"
+            android:layout_marginTop="110dp"
             android:layout_marginBottom="24dp"
             android:background="@drawable/button_style"
             android:padding="12dp"

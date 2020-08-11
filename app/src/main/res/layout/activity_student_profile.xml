@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".StudentProfile">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DETAILS"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+
+ <TextView
+     android:id="@+id/name"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:textSize="30sp"
+     android:text="Name"
+     android:layout_marginBottom="20dp"/>
+    <TextView
+        android:id="@+id/matriculation_number_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Matriculation Number"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/gender_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Gender"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:id="@+id/level_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Level"
+        android:layout_marginBottom="20dp"/>
+</LinearLayout>
