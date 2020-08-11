@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.Blob;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -24,6 +25,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.grace.biometricattendance.models.Class;
 import com.grace.biometricattendance.models.ProfileDetails;
+import com.grace.biometricattendance.models.Student;
 import com.grace.biometricattendance.sourceafis.FingerprintMatcher;
 import com.grace.biometricattendance.sourceafis.FingerprintTemplate;
 
@@ -44,6 +46,8 @@ public class AddClass extends AppCompatActivity {
     ProfileDetails match;
     List<ProfileDetails> detailsList;
     ProfileDetails details;
+    List<Student> students = new ArrayList<>() ;
+    String classId = Timestamp.now().toString();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +76,7 @@ public class AddClass extends AppCompatActivity {
                 }
                 String id = auth.getCurrentUser().getUid();
                 Toast.makeText(AddClass.this, id, Toast.LENGTH_SHORT).show();
-                Class classes = new Class(id, course_title.getText().toString(), course_code.getText().toString());
+                Class classes = new Class(id, classId, course_title.getText().toString(), course_code.getText().toString(),students);
                 firestore.collection("class").document().set(classes)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
@@ -151,6 +155,7 @@ public class AddClass extends AppCompatActivity {
                         if (match != null) {
                             Intent intent = new Intent(AddClass.this, StudentProfile.class);
                             intent.putExtra("id", match.getId());
+                            intent.putExtra("classId", classId);
                             startActivity(intent);
 
                             Toast.makeText(this, "Match found", Toast.LENGTH_SHORT).show();

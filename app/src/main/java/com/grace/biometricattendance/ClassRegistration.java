@@ -94,7 +94,7 @@ public class ClassRegistration extends AppCompatActivity {
             }
         };
         recyclerView.setAdapter(firestoreRecyclerAdapter);
-//        firestoreRecyclerAdapter.startListening();
+        firestoreRecyclerAdapter.startListening();
     }
     @Override
     protected void onStop(){

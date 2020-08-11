@@ -1,14 +1,34 @@
 package com.grace.biometricattendance.models;
 
+import java.util.List;
+
 public class Class {
     String course_title;
     String course_code;
     String id;
+    List<Student> listOfStudents;
+    String classId;
 
-    public Class(String course_title, String course_code,String userId) {
+    public Class() {
+
+    }
+
+
+    public String getClassId() {
+        return classId;
+    }
+
+    public void setClassId(String classId) {
+        this.classId = classId;
+    }
+
+    public Class(String userId, String classId, String course_title, String course_code, List<Student> listOfStudents) {
         this.id = userId;
         this.course_title = course_title;
+        this.classId = classId;
         this.course_code = course_code;
+        this.listOfStudents = listOfStudents;
+
     }
 
     public String getId() {
@@ -33,5 +53,12 @@ public class Class {
 
     public void setCourse_code(String course_code) {
         this.course_code = course_code;
+    }
+    public List<Student> getListOfStudents() {
+        return listOfStudents;
+    }
+
+    public void setListOfStudents(List<Student> listOfStudents) {
+        this.listOfStudents = listOfStudents;
     }
 }
