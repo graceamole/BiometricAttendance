@@ -46,4 +46,16 @@
         android:textSize="30sp"
         android:text="Level"
         android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/confirm_attendance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_style"
+        android:padding="12dp"
+
+        android:text="Confirm attendance"
+        android:textColor="@android:color/white" />
 </LinearLayout>
