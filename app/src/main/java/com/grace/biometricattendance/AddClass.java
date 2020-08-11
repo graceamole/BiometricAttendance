@@ -22,6 +22,7 @@ import com.google.firebase.firestore.Blob;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.grace.biometricattendance.models.Class;
 import com.grace.biometricattendance.models.ProfileDetails;
 import com.grace.biometricattendance.sourceafis.FingerprintMatcher;
 import com.grace.biometricattendance.sourceafis.FingerprintTemplate;
@@ -70,10 +71,8 @@ public class AddClass extends AppCompatActivity {
                     return;
                 }
                 String id = auth.getCurrentUser().getUid();
-                Map<String, Object> classes = new HashMap<>();
-                classes.put("course_code", course_code.getText().toString());
-                classes.put("course_title", course_title.getText().toString());
-                classes.put("userId", id);
+                Toast.makeText(AddClass.this, id, Toast.LENGTH_SHORT).show();
+                Class classes = new Class(id, course_title.getText().toString(), course_code.getText().toString());
                 firestore.collection("class").document().set(classes)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override

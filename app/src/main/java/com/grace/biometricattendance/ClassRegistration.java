@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
@@ -57,8 +58,8 @@ public class ClassRegistration extends AppCompatActivity {
 
         firestore = FirebaseFirestore.getInstance();
         final CollectionReference collectionReference = firestore.collection("class");
-        query = collectionReference.whereEqualTo("userId", user_id);
-
+        Toast.makeText(this, user_id, Toast.LENGTH_SHORT).show();
+        query = collectionReference.whereEqualTo("id", user_id);
 
         addClass.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +81,7 @@ public class ClassRegistration extends AppCompatActivity {
         firestoreRecyclerAdapter = new FirestoreRecyclerAdapter<Class, MyViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i, @NonNull Class aClass) {
+                Log.i("TAG", aClass.getId());
                 myViewHolder.setData(aClass.getCourse_title(), aClass.getCourse_code());
             }
 
@@ -92,7 +94,7 @@ public class ClassRegistration extends AppCompatActivity {
             }
         };
         recyclerView.setAdapter(firestoreRecyclerAdapter);
-        firestoreRecyclerAdapter.startListening();
+//        firestoreRecyclerAdapter.startListening();
     }
     @Override
     protected void onStop(){

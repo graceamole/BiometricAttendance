@@ -5,12 +5,19 @@ public class Class {
     String course_code;
     String id;
 
-    public Class(String id, String course_title, String course_code) {
-        this.id = id;
+    public Class(String course_title, String course_code,String userId) {
+        this.id = userId;
         this.course_title = course_title;
         this.course_code = course_code;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getCourse_title() {
         return course_title;
