@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddClass"></activity>
+        <activity android:name=".ReportActivity">
+
+        </activity>
+        <activity android:name=".StudentProfile" />
+        <activity android:name=".AddClass" />
         <activity android:name=".ClassRegistration" />
         <activity android:name=".FingerPrintPage" />
         <activity android:name=".StudentDetails" />

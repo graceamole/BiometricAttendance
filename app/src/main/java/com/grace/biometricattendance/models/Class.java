@@ -3,11 +3,14 @@ package com.grace.biometricattendance.models;
 public class Class {
     String course_title;
     String course_code;
+    String id;
 
     public Class(String id, String course_title, String course_code) {
+        this.id = id;
         this.course_title = course_title;
         this.course_code = course_code;
     }
+
 
     public String getCourse_title() {
         return course_title;

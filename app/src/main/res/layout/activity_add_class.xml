@@ -18,7 +18,7 @@
         >
 
         <EditText
-            android:id="@+id/course_title"
+            android:id="@+id/edit_course_title"
             android:background="@drawable/input_outline"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -37,12 +37,11 @@
         >
 
         <EditText
-            android:id="@+id/course_code"
+            android:id="@+id/edit_course_code"
             android:background="@drawable/input_outline"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:hint="Course Code"
-            android:inputType="textPassword"
             android:padding="8dp"
 
             />
@@ -66,7 +65,6 @@
         android:layout_marginBottom="24dp"
         android:background="@drawable/button_style"
         android:padding="12dp"
-
         android:text="Attendance"
         android:textColor="@android:color/white" />
 

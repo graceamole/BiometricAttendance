@@ -69,12 +69,13 @@ public class StudentDetails extends AppCompatActivity {
         }
 
         Map<String, Object> student = new HashMap<>();
-        student.put("studentId", Timestamp.now());
+        student.put("studentId", Timestamp.now().toString());
         student.put("first_name", firstName.getText().toString());
         student.put("last_name", lastName.getText().toString());
         student.put("level", level.getText().toString());
         student.put("gender", gender.getText().toString());
         student.put("fingerprint", "");
+
 
         firestore.collection("Student").document(matriculationNumber.getText().toString())
                 .set(student).addOnSuccessListener(new OnSuccessListener<Void>() {
